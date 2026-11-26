@@ -147,10 +147,10 @@ BEGIN
         anio_modelo      SMALLINT      NOT NULL,
         precio_lista     DECIMAL(10,2) NOT NULL,
         fecha_inicio     DATE          NOT NULL,
-        fecha_fin        DATE          NOT NULL CONSTRAINT DF_Dim_Producto_fin    DEFAULT ('9999-12-31'),
-        es_actual        BIT           NOT NULL CONSTRAINT DF_Dim_Producto_actual DEFAULT (1)
+        fecha_fin        DATE          NULL,       -- NULL = version vigente
+        es_actual        AS (CASE WHEN fecha_fin IS NULL THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END)
     );
-    CREATE INDEX IX_Dim_Producto_negocio ON dw.Dim_Producto (producto_id, es_actual);
+    CREATE INDEX IX_Dim_Producto_negocio ON dw.Dim_Producto (producto_id, fecha_fin);
 END;
 GO
 
@@ -168,10 +168,10 @@ BEGIN
         estado          VARCHAR(25)  NULL,
         codigo_postal   VARCHAR(5)   NULL,
         fecha_inicio    DATE         NOT NULL,
-        fecha_fin       DATE         NOT NULL CONSTRAINT DF_Dim_Cliente_fin    DEFAULT ('9999-12-31'),
-        es_actual       BIT          NOT NULL CONSTRAINT DF_Dim_Cliente_actual DEFAULT (1)
+        fecha_fin       DATE         NULL,       -- NULL = version vigente
+        es_actual       AS (CASE WHEN fecha_fin IS NULL THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END)
     );
-    CREATE INDEX IX_Dim_Cliente_negocio ON dw.Dim_Cliente (cliente_id, es_actual);
+    CREATE INDEX IX_Dim_Cliente_negocio ON dw.Dim_Cliente (cliente_id, fecha_fin);
 END;
 GO
 

@@ -11,36 +11,10 @@
   DTS:LocaleID="5130"
   DTS:ObjectName="01_Carga_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{96BB1454-93F0-43F6-AAB9-225F9DF5B442}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{AFC90472-04DE-4DB2-80DA-E77948495E92}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[BikeStoresDW_Destino]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{91648A92-C1DA-451F-986A-A4AFA225020D}"
-      DTS:ObjectName="BikeStoresDW_Destino">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BikeStoresDW;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{91648A92-C1DA-451F-986A-A4AFA225020D}localhost.BikeStoresDW;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[BikeStores_Origen]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{C2766AA0-BE16-4AD1-8822-71734179D331}"
-      DTS:ObjectName="BikeStores_Origen">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BikeStores;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Package-{C2766AA0-BE16-4AD1-8822-71734179D331}localhost.BikeStores;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -116,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -243,8 +217,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -370,8 +344,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -541,8 +515,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 3.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -766,8 +740,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 4.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -977,8 +951,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 5.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1176,8 +1150,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 6.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1359,8 +1333,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 7.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1530,8 +1504,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Destination 8.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStoresDW_Destino]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStoresDW_Destino]"
+                  connectionManagerID="{91648A92-C1DA-451F-986A-A4AFA225020D}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStoresDW_Destino]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1655,8 +1629,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1785,8 +1759,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1915,8 +1889,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 2.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2123,8 +2097,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 3.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2421,8 +2395,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 4.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2695,8 +2669,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 5.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2951,8 +2925,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 6.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3183,8 +3157,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 7.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3391,8 +3365,8 @@
               <connections>
                 <connection
                   refId="Package\Cargar staging\OLE DB Source 8.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[BikeStores_Origen]"
-                  connectionManagerRefId="Package.ConnectionManagers[BikeStores_Origen]"
+                  connectionManagerID="{C2766AA0-BE16-4AD1-8822-71734179D331}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BikeStores_Origen]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
