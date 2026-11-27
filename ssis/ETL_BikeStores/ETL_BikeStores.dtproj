@@ -26,12 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DEINER</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy7xobLwv6ky8eJZnx7ViMwAAAAACAAAAAAAQZgAAAAEAACAAAADC0EG1W4NQshEixS13MUrD9kBm2OVYyTtigHbeXYMBaQAAAAAOgAAAAAIAACAAAACowWFDID2q++6BTHgz9+U6Dt/viQcC+kWQ+pTLMge8g5AAAAAIkfCXBjx+3crrER0gFRPbejC/rTxtLiKxDTbzKtvPoOwp1d7U6y+sUGIWRdPWK/B3SRNocZHGTslXqQpRq3RHwng57171nOyxsVsHzCeHsX48cz2UPro4IPdUh6eQi6lXb5ec9iiaoZf6gyOtvmnJyiw/M/v45ZnhXwqfhL+qK4BQxDpHMVhz4Xwx1a+9dn5AAAAAEXgzpDU7CvfEks8FDUzjrfXoib3+5d/AvdvbtinljC9/1CCv8g1eL9JFU2d7zQUOywqOUHC/AJXMLUCx7cfKKg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy7xobLwv6ky8eJZnx7ViMwAAAAACAAAAAAAQZgAAAAEAACAAAAB2c+YvQTuBatwReiagVIZX4rpGkFsh7j6P7X2+nNKpTAAAAAAOgAAAAAIAACAAAACpy9GjS2xiU3+S8pPLPwHorvgpbuX49h28QsnZBsP0y5AAAAC2vs4zpQH2RreJ91CDtVLgD9BunMcNC5cI3kYbrnC1CSyo/qjkdXV9ZZwtnVxWp5LWfCePotPlS6a8R8Qk+DsWTBWDAGU9/xSV6jv9hf7wwCPMlfXl7M4Ues6jzx1XOgJy/Wmx70leQQfovuMQxygwggC3m2Zq9NrwVdm4kx4KBcmA+TUhLDA9ypeaJcpJDxxAAAAAd8NId9XS+txDpRHUptQkIG6MVtYAmrvoydYhUSaxgYO8NjSYH2d+KRj7QD5YJ8gY/w8034QUaaW6W/r6kZdYMQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="01_Carga_Staging.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="02_Carga_Dimensiones.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="03_Carga_Fact_Ventas.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="BikeStores_Origen.conmgr" />
@@ -360,10 +361,27 @@
                 <SSIS:Property SSIS:Name="Name">02_Carga_Dimensiones</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EFCC94FA-17C1-4BEC-BC46-2A35D4789DBD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D2E2D3B0-8007-4EAF-8041-07038EC1EDE3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="03_Carga_Fact_Ventas.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{5315B079-C0D6-4545-90A6-B82308385AA4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">03_Carga_Fact_Ventas</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{361D09EA-2999-4728-8095-4543541379EA}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
