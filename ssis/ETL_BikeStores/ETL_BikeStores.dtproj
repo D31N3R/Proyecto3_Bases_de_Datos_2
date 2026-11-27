@@ -26,13 +26,14 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DEINER</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy7xobLwv6ky8eJZnx7ViMwAAAAACAAAAAAAQZgAAAAEAACAAAAB2c+YvQTuBatwReiagVIZX4rpGkFsh7j6P7X2+nNKpTAAAAAAOgAAAAAIAACAAAACpy9GjS2xiU3+S8pPLPwHorvgpbuX49h28QsnZBsP0y5AAAAC2vs4zpQH2RreJ91CDtVLgD9BunMcNC5cI3kYbrnC1CSyo/qjkdXV9ZZwtnVxWp5LWfCePotPlS6a8R8Qk+DsWTBWDAGU9/xSV6jv9hf7wwCPMlfXl7M4Ues6jzx1XOgJy/Wmx70leQQfovuMQxygwggC3m2Zq9NrwVdm4kx4KBcmA+TUhLDA9ypeaJcpJDxxAAAAAd8NId9XS+txDpRHUptQkIG6MVtYAmrvoydYhUSaxgYO8NjSYH2d+KRj7QD5YJ8gY/w8034QUaaW6W/r6kZdYMQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy7xobLwv6ky8eJZnx7ViMwAAAAACAAAAAAAQZgAAAAEAACAAAABrhaslN/MLUU1D/06cMnnhVJbEKxr9O7GamGXiMztk9wAAAAAOgAAAAAIAACAAAABFVg2p976P9xq7jSkRZWBTvOyTbfB2+82nMWdkktaRRpAAAADGdDgiDfkeI6nrodAavF/WAfjv45X4KIKfhmqsYCVvXAn20ebiZgqrcebvuJUUfkTThmHBXvWZ9aQTwD6T7lGtKWqSJO7EaykgGOX2RQS0fEh3ZqPmbf9W4wQqHnbIMlZHKPUFpXbMK7j6EJA398GejdAOX3FBkXADMy3uPO1xFsaGwvzdTnmHnDxy6nQ/byBAAAAAB+MhnEgq/qQuS/r7GBdrhWYZTvq3okF50G9jIudRIOyAST+DUEk0TAgtvZ4ydFtY4A+DUjweZCvbuMtWpk+e6g==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="01_Carga_Staging.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="02_Carga_Dimensiones.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="03_Carga_Fact_Ventas.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="00_Orquestador.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="BikeStores_Origen.conmgr" />
@@ -382,6 +383,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{361D09EA-2999-4728-8095-4543541379EA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="00_Orquestador.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{CF1B7106-F5DE-4C65-92FF-5DFC2CFA8650}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">00_Orquestador</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{69D519F2-7965-4F9F-AB24-1B168A66D1ED}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
